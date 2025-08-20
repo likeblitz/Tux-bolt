@@ -48,7 +48,7 @@ const TokenomicsSection = () => {
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-3 hover:scale-110 transition-transform duration-300"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
                   src="/src/assets/telegram.svg" 
                   alt="Telegram" 
@@ -65,7 +65,7 @@ const TokenomicsSection = () => {
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-3 hover:scale-110 transition-transform duration-300"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
                   src="/src/assets/x.png" 
                   alt="X (Twitter)" 
@@ -82,7 +82,7 @@ const TokenomicsSection = () => {
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-3 hover:scale-110 transition-transform duration-300"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
                   src="/src/assets/dextools.svg" 
                   alt="Dextools" 
@@ -99,7 +99,7 @@ const TokenomicsSection = () => {
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-3 hover:scale-110 transition-transform duration-300"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
                   src="/src/assets/dex-screener.png" 
                   alt="Dexscreener" 
