@@ -52,17 +52,17 @@ const ContractAddress = ({ address }: ContractAddressProps) => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-muted/50 rounded-xl border-2 border-border backdrop-blur-sm">
+    <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-black/20 backdrop-blur-sm rounded-xl border border-white/20">
       <div className="flex flex-col items-center sm:items-start gap-1">
-        <span className="text-sm font-medium text-muted-foreground">Contract Address</span>
-        <span className="font-mono text-sm break-all sm:hidden">{formatAddress(address)}</span>
-        <span className="font-mono text-sm hidden sm:block">{address}</span>
+        <span className="text-sm font-medium text-white/80">Contract Address</span>
+        <span className="font-mono text-sm break-all sm:hidden text-white">{formatAddress(address)}</span>
+        <span className="font-mono text-sm hidden sm:block text-white">{address}</span>
       </div>
       <Button
         onClick={handleCopy}
         variant="outline"
         size="sm"
-        className="bg-background hover:bg-muted transition-colors border-2 font-semibold"
+        className="bg-white/10 hover:bg-white/20 transition-colors border border-white/30 font-semibold text-white hover:text-white"
       >
         {copied ? "Copied!" : "Copy"}
       </Button>
@@ -72,49 +72,38 @@ const ContractAddress = ({ address }: ContractAddressProps) => {
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero-specific overlay for extra emphasis */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
-      
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="text-center max-w-4xl mx-auto">
-          {/* TUX Logo/Character */}
-          <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <img
-                src="/assets/tux-penguin.png"
-                alt="TUX Penguin Mascot"
-                className="w-64 h-36 object-contain animate-bounce"
-                style={{ animationDuration: "3s" }}
-              />
-              <div className="absolute -inset-4 bg-primary/20 rounded-full blur-xl opacity-50 animate-pulse" />
-            </div>
-          </div>
-
-          {/* TUX Title */}
-          <div className="mb-8">
-            <h1 className="text-8xl md:text-9xl font-black text-primary mb-4 tracking-wider transform hover:scale-105 transition-transform duration-300">
-              TUX
-            </h1>
-            <div className="w-32 h-2 bg-gradient-to-r from-primary to-primary-glow mx-auto rounded-full" />
-          </div>
-
-          {/* CTA Section */}
-          <div className="mb-12 flex flex-col items-center gap-8">
-            <BuyButton href="https://portal.abs.xyz">
+    <section 
+      className="relative min-h-screen flex flex-col justify-between bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/assets/h.png')" }}
+    >
+      {/* Main Content - Right Side */}
+      <div className="flex-1 flex items-center justify-end px-6 md:px-12 lg:px-20">
+        <div className="text-right max-w-lg">
+          {/* Headline */}
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-4 tracking-wider">
+            Tux
+          </h1>
+          
+          {/* Subline */}
+          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">
+            the legendary penguin who shaped the internet
+          </p>
+          
+          {/* Buy Button */}
+          <div className="flex justify-end">
+            <BuyButton href="https://portal.abs.xyz/login">
               BUY TUX
             </BuyButton>
-          </div>
-
-          {/* Contract Address */}
-          <div className="max-w-2xl mx-auto">
-            <ContractAddress address="0x0f6b51a508a2b33e6c3115a4e9f0f1a4ce8b5bd6" />
           </div>
         </div>
       </div>
 
-      {/* Bottom Decoration */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary/20 to-transparent" />
+      {/* Contract Address - Bottom Center */}
+      <div className="flex justify-center pb-8 px-6">
+        <div className="max-w-2xl w-full">
+          <ContractAddress address="0x0f6b51a508a2b33e6c3115a4e9f0f1a4ce8b5bd6" />
+        </div>
+      </div>
     </section>
   );
 };
