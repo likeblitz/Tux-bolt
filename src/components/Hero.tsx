@@ -13,7 +13,7 @@ const BuyButton = ({ href, children }: BuyButtonProps) => {
       variant="default"
       size="lg"
       asChild
-      className="bg-primary hover:bg-primary-dark text-primary-foreground font-bold text-xl px-8 py-6 rounded-xl shadow-[var(--comic-shadow)] hover:shadow-[var(--comic-shadow-hover)] transform hover:translate-y-1 transition-all duration-200 hover:glow-[var(--glow-primary)] border-2 border-primary-dark"
+      className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl px-8 py-6 rounded-xl shadow-[0_4px_0_#ea580c] hover:shadow-[0_2px_0_#ea580c] transform hover:translate-y-1 transition-all duration-200 border-2 border-orange-600"
     >
       <a href={href} target="_blank" rel="noopener noreferrer">
         {children}
@@ -52,7 +52,7 @@ const ContractAddress = ({ address }: ContractAddressProps) => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-black/20 backdrop-blur-sm rounded-xl border border-white/20">
+    <div className="flex flex-col sm:flex-row items-center gap-4 p-4 bg-black/20 backdrop-blur-sm rounded-xl border-2 border-white/30 shadow-[0_4px_0_rgba(255,255,255,0.2)] hover:shadow-[0_2px_0_rgba(255,255,255,0.2)] transform hover:translate-y-1 transition-all duration-200">
       <div className="flex flex-col items-center sm:items-start gap-1">
         <span className="text-sm font-medium text-white/80">Contract Address</span>
         <span className="font-mono text-sm break-all sm:hidden text-white">{formatAddress(address)}</span>
@@ -62,7 +62,7 @@ const ContractAddress = ({ address }: ContractAddressProps) => {
         onClick={handleCopy}
         variant="outline"
         size="sm"
-        className="bg-white/10 hover:bg-white/20 transition-colors border border-white/30 font-semibold text-white hover:text-white"
+        className="bg-white/10 hover:bg-white/20 border-2 border-white/30 font-semibold text-white hover:text-white shadow-[0_2px_0_rgba(255,255,255,0.2)] hover:shadow-[0_1px_0_rgba(255,255,255,0.2)] transform hover:translate-y-0.5 transition-all duration-200"
       >
         {copied ? "Copied!" : "Copy"}
       </Button>
