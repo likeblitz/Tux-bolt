@@ -82,7 +82,7 @@ const HeroSection = () => {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <img
-                src="/src/assets/tux-penguin.png"
+                src="/assets/tux-penguin.png"
                 alt="TUX Penguin Mascot"
                 className="w-64 h-36 object-contain animate-bounce"
                 style={{ animationDuration: "3s" }}

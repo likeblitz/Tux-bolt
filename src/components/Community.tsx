@@ -2,7 +2,7 @@ const CommunitySection = () => {
   return (
     <section 
       className="relative min-h-screen py-20 px-6 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/src/assets/com.png')" }}
+      style={{ backgroundImage: "url('/assets/com.png')" }}
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-end">
         <div className="max-w-md">
@@ -22,7 +22,7 @@ const CommunitySection = () => {
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
                 <img 
-                  src="/src/assets/telegram.svg" 
+                  src="/assets/telegram.svg" 
                   alt="Telegram" 
                   className="w-6 h-6 md:w-7 md:h-7 filter brightness-0 invert"
                 />
@@ -39,7 +39,7 @@ const CommunitySection = () => {
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
                 <img 
-                  src="/src/assets/x.png" 
+                  src="/assets/x.png" 
                   alt="X (Twitter)" 
                   className="w-6 h-6 md:w-7 md:h-7 filter brightness-0 invert"
                 />
@@ -56,7 +56,7 @@ const CommunitySection = () => {
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
                 <img 
-                  src="/src/assets/dextools.svg" 
+                  src="/assets/dextools.svg" 
                   alt="Dextools" 
                   className="w-6 h-6 md:w-7 md:h-7 filter brightness-0 invert"
                 />
@@ -73,7 +73,7 @@ const CommunitySection = () => {
             >
               <div className="w-12 h-12 md:w-14 md:h-14 bg-black rounded-full flex items-center justify-center group-hover:bg-gray-800 transition-colors">
                 <img 
-                  src="/src/assets/dex-screener.png" 
+                  src="/assets/dex-screener.png" 
                   alt="Dexscreener" 
                   className="w-6 h-6 md:w-7 md:h-7"
                 />

@@ -190,7 +190,7 @@ const HowToBuy = () => {
               {/* Main Image with Wiggle Animation */}
               <div className="relative z-10 animate-bounce" style={{ animationDuration: '3s' }}>
                 <img
-                  src="/src/assets/HTB.svg"
+                  src="/assets/HTB.svg"
                   alt="How to Buy TUX"
                   className="w-80 h-80 md:w-96 md:h-96 object-contain filter drop-shadow-2xl animate-pulse"
                   style={{ 

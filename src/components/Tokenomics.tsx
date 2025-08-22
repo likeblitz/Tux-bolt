@@ -20,7 +20,7 @@ const TokenomicsSection = () => {
             {/* Center Image */}
             <div className="flex justify-center">
               <img 
-                src="/src/assets/tok.png" 
+                src="/assets/tok.png" 
                 alt="TUX Token" 
                 className="w-64 h-64 md:w-80 md:h-80 object-contain"
               />
@@ -50,7 +50,7 @@ const TokenomicsSection = () => {
             >
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
-                  src="/src/assets/telegram.svg" 
+                  src="/assets/telegram.svg" 
                   alt="Telegram" 
                   className="w-8 h-8 md:w-10 md:h-10 filter brightness-0 invert"
                 />
@@ -67,7 +67,7 @@ const TokenomicsSection = () => {
             >
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
-                  src="/src/assets/x.png" 
+                  src="/assets/x.png" 
                   alt="X (Twitter)" 
                   className="w-8 h-8 md:w-10 md:h-10 filter brightness-0 invert"
                 />
@@ -84,7 +84,7 @@ const TokenomicsSection = () => {
             >
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
-                  src="/src/assets/dextools.svg" 
+                  src="/assets/dextools.svg" 
                   alt="Dextools" 
                   className="w-8 h-8 md:w-10 md:h-10 filter brightness-0 invert"
                 />
@@ -101,7 +101,7 @@ const TokenomicsSection = () => {
             >
               <div className="w-16 h-16 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
                 <img 
-                  src="/src/assets/dex-screener.png" 
+                  src="/assets/dex-screener.png" 
                   alt="Dexscreener" 
                   className="w-8 h-8 md:w-10 md:h-10"
                 />
