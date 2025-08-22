@@ -148,7 +148,7 @@ const HowToBuy = () => {
                         <Button
                           asChild
                           size="lg"
-                          className="bg-primary hover:bg-primary-dark text-primary-foreground font-bold text-xl px-12 py-6 rounded-xl shadow-[var(--comic-shadow)] hover:shadow-[var(--comic-shadow-hover)] transform hover:translate-y-1 transition-all duration-200 border-2 border-primary-dark"
+                          className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl px-12 py-6 rounded-xl shadow-[0_4px_0_#ea580c] hover:shadow-[0_2px_0_#ea580c] transform hover:translate-y-1 transition-all duration-200 border-2 border-orange-600"
                         >
                           <a href="https://portal.abs.xyz/login" target="_blank" rel="noopener noreferrer">
                             BUY
