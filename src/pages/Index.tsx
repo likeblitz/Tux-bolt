@@ -5,11 +5,11 @@ import HowToBuy from "@/components/HowToBuy";
 import Marquee from "@/components/Marquee";
 import CommunitySection from "@/components/Community";
 
-
 const Index = () => {
   return (
     <div className="min-h-screen">
       <HeroSection />
+      <Marquee />
       <AboutSection />
       <TokenomicsSection />
       <HowToBuy />
@@ -20,3 +20,4 @@ const Index = () => {
 };
 
 export default Index;
+
