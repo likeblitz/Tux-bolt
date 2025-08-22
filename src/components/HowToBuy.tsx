@@ -129,7 +129,7 @@ const HowToBuy = () => {
               </div>
 
               {/* Content Box */}
-              <div className="relative bg-card/80 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-8 min-h-[280px] shadow-lg">
+              <div className="relative bg-card/80 backdrop-blur-sm border-2 border-orange-400/40 rounded-2xl p-8 min-h-[280px] shadow-lg">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl" />
                 
                 <div className="relative z-10">
