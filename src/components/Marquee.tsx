@@ -3,7 +3,7 @@ const Marquee = () => {
   const marqueeItems = Array(12).fill(null).map((_, index) => (
     <div key={index} className="flex items-center whitespace-nowrap">
       <img 
-        src="/assets/1.png" 
+        src="/src/assets/1.png" 
         alt="TUX icon" 
         className="w-8 h-8 md:w-10 md:h-10 mr-4 md:mr-6 flex-shrink-0"
       />
@@ -16,11 +16,6 @@ const Marquee = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 py-8 md:py-12">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      </div>
-      
       {/* Marquee container */}
       <div className="relative flex overflow-hidden">
         <div className="flex animate-marquee">
@@ -36,20 +31,14 @@ const Marquee = () => {
       {/* Custom CSS for marquee animation */}
       <style jsx>{`
         @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        
         .animate-marquee {
           display: flex;
-          min-width: 200%; /* double width for duplication */
+          min-width: 200%;
           animation: marquee 30s linear infinite;
         }
-        
         @media (max-width: 768px) {
           .animate-marquee {
             animation: marquee 35s linear infinite;
@@ -61,3 +50,4 @@ const Marquee = () => {
 };
 
 export default Marquee;
+
