@@ -3,7 +3,7 @@ const Marquee = () => {
   const marqueeItems = Array(12).fill(null).map((_, index) => (
     <div key={index} className="flex items-center whitespace-nowrap">
       <img 
-        src="/src/assets/1.png" 
+        src="/assets/1.png"
         alt="TUX icon" 
         className="w-8 h-8 md:w-10 md:h-10 mr-4 md:mr-6 flex-shrink-0"
       />
