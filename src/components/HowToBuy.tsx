@@ -8,19 +8,56 @@ const HowToBuy = () => {
   const steps = [
     {
       headline: "STEP 1",
-      content: <>Create an Account On <span className="font-bold text-orange-400">Abstract</span>... (etc)</>
+      content: (
+        <>
+          Create an Account On <span className="font-bold text-orange-400">Abstract</span>.
+          <br />
+          Navigate to <span className="font-bold text-orange-400">abs.xyz</span>, click{" "}
+          <span className="font-bold">LOGIN</span> or <span className="font-bold">GO TO APP</span>, 
+          and choose a sign-up method (<span className="text-orange-400">Email</span>,{" "}
+          <span className="text-orange-400">Google</span>,{" "}
+          <span className="text-orange-400">Passkey</span>, or{" "}
+          <span className="text-orange-400">Wallet</span>).
+        </>
+      ),
     },
     {
       headline: "STEP 2",
-      content: <>Fund Your <span className="font-bold text-orange-400">Abstract Wallet</span>... (etc)</>
+      content: (
+        <>
+          Fund Your <span className="font-bold text-orange-400">Abstract Wallet</span>.
+          <br />
+          After logging in, go to your <span className="font-bold">Wallet page</span>, click{" "}
+          <span className="font-bold text-orange-400">FUND</span>, and select a method (
+          <span className="text-orange-400">Bridge</span>,{" "}
+          <span className="text-orange-400">Coinbase</span>,{" "}
+          <span className="text-orange-400">Centralized Exchange</span>, or{" "}
+          <span className="text-orange-400">Moonpay</span>).
+        </>
+      ),
     },
     {
       headline: "STEP 3",
-      content: <>Purchase <span className="font-bold text-orange-400">$TUX Token</span>... (etc)</>
+      content: (
+        <>
+          Purchase <span className="font-bold text-orange-400">$TUX Token</span>.
+          <br />
+          Navigate to the <span className="font-bold">Trade section</span> on{" "}
+          <span className="font-bold text-orange-400">abs.xyz</span>, select the{" "}
+          <span className="font-bold text-orange-400">$TUX token</span>, enter the amount, and confirm the transaction.
+        </>
+      ),
     },
     {
       headline: "STEP 4",
-      content: <>Already completed the steps? <span className="font-bold text-orange-400">Great!</span>... (etc)</>
+      content: (
+        <>
+          Already completed the steps? <span className="font-bold text-orange-400">Great!</span>
+          <br />
+          Just hit the button below to go directly to{" "}
+          <span className="font-bold text-orange-400">Abstract</span>.
+        </>
+      ),
     },
   ];
 
@@ -31,6 +68,7 @@ const HowToBuy = () => {
       setTimeout(() => setIsAnimating(false), 300);
     }
   };
+
   const prevStep = () => {
     if (!isAnimating) {
       setIsAnimating(true);
@@ -38,6 +76,7 @@ const HowToBuy = () => {
       setTimeout(() => setIsAnimating(false), 300);
     }
   };
+
   const goToStep = (i: number) => {
     if (!isAnimating && i !== currentStep) {
       setIsAnimating(true);
@@ -46,6 +85,7 @@ const HowToBuy = () => {
     }
   };
 
+  // Auto-advance carousel
   useEffect(() => {
     const t = setInterval(() => {
       if (!isAnimating) nextStep();
@@ -54,7 +94,11 @@ const HowToBuy = () => {
   }, [isAnimating]);
 
   return (
-    <section id="how-to-buy" className="relative min-h-screen py-12 sm:py-20 px-4 sm:px-6 w-full">
+    <section
+      id="how-to-buy"
+      className="relative min-h-screen py-12 sm:py-20 px-4 sm:px-6 w-full"
+    >
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full">
@@ -73,33 +117,51 @@ const HowToBuy = () => {
             <div className="relative z-10">
               {/* Arrows */}
               <div className="flex justify-between items-center mb-4 sm:mb-6">
-                <button onClick={prevStep} disabled={isAnimating}
-                  className="p-2 sm:p-3 rounded-xl bg-primary text-white font-bold text-xl sm:text-2xl border-2 border-primary shadow-md hover:bg-primary/90 hover:translate-y-1 transition disabled:opacity-50">
+                <button
+                  onClick={prevStep}
+                  disabled={isAnimating}
+                  className="p-2 sm:p-3 rounded-xl bg-primary text-white font-bold text-xl sm:text-2xl border-2 border-primary shadow-md hover:bg-primary/90 hover:translate-y-1 transition disabled:opacity-50"
+                >
                   &lt;
                 </button>
-                <button onClick={nextStep} disabled={isAnimating}
-                  className="p-2 sm:p-3 rounded-xl bg-primary text-white font-bold text-xl sm:text-2xl border-2 border-primary shadow-md hover:bg-primary/90 hover:translate-y-1 transition disabled:opacity-50">
+                <button
+                  onClick={nextStep}
+                  disabled={isAnimating}
+                  className="p-2 sm:p-3 rounded-xl bg-primary text-white font-bold text-xl sm:text-2xl border-2 border-primary shadow-md hover:bg-primary/90 hover:translate-y-1 transition disabled:opacity-50"
+                >
                   &gt;
                 </button>
               </div>
 
-              {/* Step box */}
-              <div className="relative bg-card/80 backdrop-blur-sm border-2 border-orange-400/40 rounded-2xl p-6 min-h-[240px] sm:min-h-[280px] shadow-lg">
+              {/* Step Box */}
+              <div className="relative bg-card/80 backdrop-blur-sm border-2 border-orange-400/40 rounded-2xl p-6 shadow-lg">
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-4">{steps[currentStep].headline}</h3>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-4">
+                    {steps[currentStep].headline}
+                  </h3>
                   <div className="text-base sm:text-lg md:text-xl leading-relaxed text-foreground mb-6">
                     {steps[currentStep].content}
                   </div>
 
                   {currentStep === 3 && (
-                    <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 rounded-xl shadow-md border-2 border-orange-600">
-                      <a href="https://portal.abs.xyz/login" target="_blank" rel="noopener noreferrer">BUY</a>
+                    <Button
+                      asChild
+                      size="lg"
+                      className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 rounded-xl shadow-md border-2 border-orange-600"
+                    >
+                      <a
+                        href="https://portal.abs.xyz/login"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        BUY
+                      </a>
                     </Button>
                   )}
                 </div>
               </div>
 
-              {/* Styled Dot Indicators */}
+              {/* Dot Indicators */}
               <div className="flex justify-center space-x-3 mt-6">
                 {steps.map((_, i) => (
                   <button
@@ -116,19 +178,25 @@ const HowToBuy = () => {
             </div>
           </div>
 
-          {/* Right Image with Animation */}
+          {/* Right Image */}
           <div className="order-1 lg:order-2 flex justify-center items-center">
             <div className="relative">
               {/* Glow */}
               <div className="absolute inset-0 -m-4 sm:-m-8 rounded-full bg-gradient-to-r from-yellow-400/20 via-yellow-300/30 to-yellow-400/20 blur-xl animate-pulse" />
 
-              {/* Wiggle + pulse animation */}
-              <div className="relative z-10 animate-bounce" style={{ animationDuration: '3s' }}>
+              {/* Image with wiggle */}
+              <div
+                className="relative z-10 animate-bounce"
+                style={{ animationDuration: "3s" }}
+              >
                 <img
                   src="/assets/HTB.svg"
                   alt="How to Buy TUX"
                   className="w-64 sm:w-80 md:w-96 object-contain drop-shadow-2xl"
-                  style={{ animation: "wiggle 4s ease-in-out infinite, pulse 2s ease-in-out infinite" }}
+                  style={{
+                    animation:
+                      "wiggle 4s ease-in-out infinite, pulse 2s ease-in-out infinite",
+                  }}
                 />
               </div>
             </div>
